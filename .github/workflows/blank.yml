@@ -42,6 +42,8 @@ jobs:
           echo "${{secrets.PRIVATE_KEY}}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan "1.14.120.233" >> ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh_authorized_keys
       - name: deploy0
         run: |
           ssh root@1.14.120.233 
