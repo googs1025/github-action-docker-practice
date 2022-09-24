@@ -44,6 +44,5 @@ jobs:
           ssh-keyscan "1.14.120.233" >> ~/.ssh/known_hosts
       - name: deploy0
         run: |
-          ssh root@1.14.120.233 "
-            cd /home/test
-        "   
+          ssh root@1.14.120.233 
+          "cd /home/test"   
