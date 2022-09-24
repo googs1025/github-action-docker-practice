@@ -27,15 +27,15 @@ jobs:
 
 
 
-      - name: Upload
-        uses: appleboy/scp-action@master
-        env:
-          host: ${{ secrets.REMOTE_HOST }} # 公网ip
-          username: ${{ secrets.REMOTE_USERNAME }} # 用户名
-          key: ${{ secrets.PRIVATE_KEY }} # 私钥
-        with:
-          source: "README.md" # 发送文件
-          target: "/var/try" # 目标目录
+#       - name: Upload
+#         uses: appleboy/scp-action@master
+#         env:
+#           host: ${{ secrets.REMOTE_HOST }} # 公网ip
+#           username: ${{ secrets.REMOTE_USERNAME }} # 用户名
+#           key: ${{ secrets.PRIVATE_KEY }} # 私钥
+#         with:
+#           source: "README.md" # 发送文件
+#           target: "/var/try" # 目标目录
       - name: set ssh key # 临时设置 ssh key
         run: |
           mkdir -p ~/.ssh/
